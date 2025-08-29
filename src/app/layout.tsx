@@ -8,15 +8,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
+      <Header />
       <body
         className={`antialiased`} cz-shortcut-listen="true"
       >
-        <Header />
         {children}
-        <footer>
-
-        </footer>
       </body>
     </html>
   );
