@@ -9,10 +9,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <Header />
       <body
         className={`antialiased`} cz-shortcut-listen="true"
       >
+        <Header />
         {children}
       </body>
     </html>

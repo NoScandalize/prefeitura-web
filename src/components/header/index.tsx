@@ -1,22 +1,49 @@
+import Image from "next/image"
+import Link from "next/link"
+
 export function Header() {
-    return (
-        <header className="border-b-1 border-zinc-600 flex-row justify-around t-0 sticky top-0 bg-black">
-          <nav className="flex mx-auto pr-10 pl-10 pb-5 pt-5 justify-between">
-            <a href="./">
-              <img src="logo.svg" alt="logo" width="100px" />
-            </a>
-            <ul className="flex gap-5">
-              <li>
-                <a href="">Lista de Obras</a>
-              </li>
-              <li>
-                <a href="">Sobre o projeto</a>
-              </li>
-              <li>
-                <a href="">Equipe</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-    )
+  return (
+    <header className="sticky top-0 z-50 bg-black border-b border-zinc-800 h-12">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between h-full px-4">
+        {/* Logo */}
+        <Link href="/" aria-label="Página inicial" className="flex items-center h-full">
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={80}
+            height={32}
+            priority
+          />
+        </Link>
+
+        {/* Navegação */}
+        <ul className="flex items-center gap-4 text-sm font-medium text-zinc-200 h-full">
+          <li className="flex items-center">
+            <Link
+              href="/obras"
+              className="hover:text-white transition-colors"
+            >
+              Obras
+            </Link>
+          </li>
+          <li className="flex items-center">
+            <Link
+              href="/sobre"
+              className="hover:text-white transition-colors"
+            >
+              Sobre
+            </Link>
+          </li>
+          <li className="flex items-center">
+            <Link
+              href="/equipe"
+              className="hover:text-white transition-colors"
+            >
+              Equipe
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  )
 }
