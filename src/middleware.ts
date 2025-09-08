@@ -1,9 +1,13 @@
 import { MiddlewareConfig, NextRequest, NextResponse } from "next/server"
 
 const publicRoutes = [
+  {path: '/', whenAuthenticated: 'next' },
   { path: '/signin', whenAuthenticated: 'redirect' },
   { path: '/register', whenAuthenticated: 'redirect' },
-  { path: '/pricing', whenAuthenticated: 'next' }
+  { path: '/pricing', whenAuthenticated: 'next' },
+  { path: '/obras', whenAuthenticated: 'next' },
+  { path: '/about', whenAuthenticated: 'next' },
+  { path: '/equipe', whenAuthenticated: 'next' }
 ] as const
 
 const REDIRECT_WHEN_NOT_AUTHENTICATED_ROUTE = '/signin'
@@ -28,7 +32,7 @@ export function middleware(request: NextRequest) {
     if (authToken && publicRoute && publicRoute.whenAuthenticated === 'redirect') {
       const redirectUrl = request.nextUrl.clone()
 
-      redirectUrl.pathname = '/'
+      redirectUrl.pathname = '/dashboard'
 
       return NextResponse.redirect(redirectUrl)
     }
