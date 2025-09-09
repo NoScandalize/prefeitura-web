@@ -41,7 +41,7 @@ export function Header() {
               href="/signin"
               className="hover:text-white transition-colors"
             >
-              Sign In
+              Entrar
             </Link>
           </li>
         </ul>
