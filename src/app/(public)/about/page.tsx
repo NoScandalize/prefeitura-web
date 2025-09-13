@@ -1,7 +1,9 @@
+import { Components } from "@/components";
+
 export default function About() {
   return (
-    <div>
+    <Components.Layout.Body pageTitle="Sobre" >
       <h1>Sobre</h1>
-    </div>
+    </Components.Layout.Body>
   )
 }

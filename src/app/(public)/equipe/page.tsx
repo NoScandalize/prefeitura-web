@@ -1,7 +1,9 @@
+import { Components } from "@/components";
+
 export default function Equipe() {
   return (
-    <div>
+    <Components.Layout.Body pageTitle="Equipe">
       <h1>Equipe</h1>
-    </div>
+    </Components.Layout.Body>
   )
 }

@@ -1,5 +1,7 @@
-import { form } from './form'
+import { FormComponents } from './form'
+import { LayoutsComponents } from './layouts'
 
-export const components = {
-    form
+export const Components = {
+    Form: FormComponents,
+    Layout: LayoutsComponents
 }

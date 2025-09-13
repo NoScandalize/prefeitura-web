@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import { Header } from '@/components/header'
+import { Components } from '@/components'
 
 export default function RootLayout({
   children,
@@ -12,7 +12,7 @@ export default function RootLayout({
       <body
         className={`antialiased`} cz-shortcut-listen="true"
       >
-        <Header />
+        <Components.Layout.Header />
         {children}
       </body>
     </html>

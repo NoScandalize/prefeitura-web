@@ -1,8 +1,9 @@
+import { Components } from "@/components";
+
 export default function Obras() {
   return (
-    <div>
-      <title>Obras - InfraView</title>
+    <Components.Layout.Body pageTitle="Obras">
       <h1>Lista de Obras</h1>
-    </div>
+    </Components.Layout.Body>
   );
 }
