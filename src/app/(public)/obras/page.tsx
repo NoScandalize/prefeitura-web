@@ -2,8 +2,8 @@ import { Components } from "@/components";
 
 export default function Obras() {
   return (
-    <Components.Layout.Body pageTitle="Obras">
+    <Components.Layout.Main pageTitle="Obras">
       <h1>Lista de Obras</h1>
-    </Components.Layout.Body>
+    </Components.Layout.Main>
   );
 }

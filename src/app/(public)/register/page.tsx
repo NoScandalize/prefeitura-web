@@ -2,7 +2,7 @@ import { Components } from '@/components'
 
 export default function Register() {
   return (
-    <Components.Layout.Body pageTitle='Register'>
+    <Components.Layout.Main pageTitle='Register'>
       <Components.Form.Root title='Register Form' >
         <Components.Form.Input name='username' placeholder='Escolha um nome de usuário' type='text' />
         <Components.Form.Input name='email' placeholder='Digite um email' type='email' />
@@ -11,6 +11,6 @@ export default function Register() {
         <Components.Form.Button value='Cadastrar' />
         <Components.Form.Link text='Já possui conta? Entre aqui' href='/login' />
       </Components.Form.Root>
-    </Components.Layout.Body>
+    </Components.Layout.Main>
   );
 }
