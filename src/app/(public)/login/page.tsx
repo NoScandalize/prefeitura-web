@@ -1,6 +1,6 @@
 import { Components } from "@/components";
 
-export default function SignIn() {
+export default function Login() {
   return (
     <Components.Layout.Body pageTitle="Login">
       <Components.Form.Root title="Login Form">

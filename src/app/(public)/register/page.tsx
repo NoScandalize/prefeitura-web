@@ -9,7 +9,7 @@ export default function Register() {
         <Components.Form.Input name='password' placeholder='Digite sua senha' type='password' />
         <Components.Form.Input name='confirmPassword' placeholder='Confirme sua senha' type='password' />
         <Components.Form.Button value='Cadastrar' />
-        <Components.Form.Link text='Já possui conta? Entre aqui' href='/signin' />
+        <Components.Form.Link text='Já possui conta? Entre aqui' href='/login' />
       </Components.Form.Root>
     </Components.Layout.Body>
   );

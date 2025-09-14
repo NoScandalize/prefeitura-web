@@ -38,7 +38,7 @@ export function Header() {
           </li>
           <li className="flex items-center">
             <Link
-              href="/signin"
+              href="/login"
               className="hover:text-white transition-colors"
             >
               Entrar
