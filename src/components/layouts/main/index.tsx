@@ -7,7 +7,7 @@ interface MainRootProps {
 
 export function Main({ children, pageTitle }: MainRootProps) {
   return (
-    <div className="ml-50 mr-50 border-l border-r border-zinc-800 font-sans flex items-center justify-center h-screen">
+    <div className="border-l border-r border-zinc-800 font-sans flex flex-1 items-center justify-center mx-auto w-full max-w-6xl">
       <div>
         <title>{`${pageTitle} | InfraView`}</title>
         {children}

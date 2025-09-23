@@ -5,6 +5,7 @@ interface ProjectsCardProps {
     status: 'Completed' | 'InProgress' | 'Paralyzed',
     img: string,
     data: ProjectData
+    className?: string
 }
 
 type ProjectData = {
@@ -39,22 +40,22 @@ export const ProgressStatus: Status<ProjectsStatusProps> = {
     }
 }
 
-export function ProjectsCard({ status, img, data }: ProjectsCardProps) {
+export function ProjectsCard({ status, img, data, className }: ProjectsCardProps) {
     return (
-        <div className="flex border rounded-2xl border-zinc-700 w-auto mt-3">
-            <div>
-                <img className="w-72 m-5 border rounded-2xl border-zinc-600" src={img} alt="Imagem da obra" />
-                <div className="p-4  flex justify-center">
-                <Components.UI.Projects.Status text={ProgressStatus[status].text} color={ProgressStatus[status].color} animate={ProgressStatus[status].animate} icon={ProgressStatus[status].icon} />   
+            <div className={`flex border rounded-2xl border-zinc-700 w-auto mt-3 ${className}`}>
+                <div>
+                    <img className="w-72 m-5 border rounded-2xl border-zinc-600" src={img} alt="Imagem da obra" />
+                    <div className="p-4  flex justify-center">
+                    <Components.UI.Projects.Status text={ProgressStatus[status].text} color={ProgressStatus[status].color} animate={ProgressStatus[status].animate} icon={ProgressStatus[status].icon} />   
+                    </div>
+                </div>
+                <div className="w-full pt-3 pl-11">
+                    <h1 className="text-2xl pb-2.5">{data.title}</h1>
+                    <p>Número: {data.number}</p>
+                    <p>Modalidade: {data.modality}</p>
+                    <p>Valor: {data.value}</p>
+                    <p>Endereço: {data.address}</p>
                 </div>
             </div>
-            <div className="w-full pt-3 pl-11">
-                <h1 className="text-2xl pb-2.5">{data.title}</h1>
-                <p>Número: {data.number}</p>
-                <p>Modalidade: {data.modality}</p>
-                <p>Valor: {data.value}</p>
-                <p>Endereço: {data.address}</p>
-            </div>
-        </div>
     )
 }

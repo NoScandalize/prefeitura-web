@@ -20,7 +20,7 @@ const crecheDNOCS = {
   address: 'Rua Maria Francisca da Silva.',
   status: 'InProgress'
 }
-
+  
 const obrasArray = [ament, crecheDNOCS]
 
 export default function Obras() {
@@ -28,7 +28,7 @@ export default function Obras() {
     <Components.Layout.Main pageTitle="Obras">
       <Components.UI.Projects.Root>
         {obrasArray.map((obra) => (
-          <Components.UI.Projects.Card status='InProgress' data={obra} img={obra.img} key={obra.number} />
+            <Components.UI.Projects.Card status='InProgress' data={obra} img={obra.img} key={obra.number} />
         ))}
       </Components.UI.Projects.Root>
     </Components.Layout.Main>
